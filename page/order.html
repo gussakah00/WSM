@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Order Pesanan | Warung Sakah Mesari</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../css/app.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <header class="navbar-container">
+      <div class="logo">
+        <img src="../img/logo.png" alt="Logo Warung Sakah Mesari" />
+      </div>
+
+      <button class="hamburger-menu" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="nav-list">
+        <button class="close-menu">X</button>
+        <ul>
+          <li><a href="../index.html">Beranda</a></li>
+          <li><a href="menu.html" class="active">Menu</a></li>
+          <li><a href="lokasi.html">Lokasi WSM</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+          <li><a href="order.html" class="active">Order</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <li class="back-card mt-4">
+        <a href="menu.html" class="back-link"> ← Kembali ke Menu </a>
+      </li>
+      <section class="services">
+        <div class="po">
+          <h1><b>Order Pesanan</b></h1>
+          <p>
+            Form ini digunakan untuk pemesanan nasi atau bubur dengan jumlah
+            minimal 20 porsi. Harga per porsi sebesar Rp10.000.
+          </p>
+        </div>
+
+        <!-- Bagian Form di order.html -->
+        <div class="form-vertikal">
+          <div class="form-group">
+            <label>Nama Lengkap</label>
+            <input
+              type="text"
+              id="order_nama"
+              placeholder="Masukkan nama lengkap"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Nomor WhatsApp Anda</label>
+            <input
+              type="tel"
+              id="order_wa"
+              placeholder="08xxxxxxxxxx"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Pilihan Menu</label>
+            <select id="order_menu" required>
+              <option value="">-- Pilih Menu --</option>
+              <option value="Nasi Kuning">Nasi Kuning</option>
+              <option value="Bubur">Bubur</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Tanggal Acara</label>
+            <input type="date" id="order_tanggal" required />
+          </div>
+
+          <div class="form-group">
+            <label>Jumlah Porsi</label>
+            <input
+              type="number"
+              id="order_porsi"
+              min="20"
+              placeholder="Minimal 20 porsi"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Alamat Acara</label>
+            <textarea
+              id="order_alamat"
+              rows="3"
+              placeholder="Masukkan alamat lengkap"
+              required
+            ></textarea>
+          </div>
+
+          <!-- PENTING: Ubah button menjadi onclick -->
+          <button type="button" onclick="kirimOrderWA()" class="btn-submit">
+            Kirim ke WhatsApp
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="contact-info">
+          <h2>Kontak</h2>
+          <p>+6281916290686</p>
+          <p>WSM@gmail.com</p>
+        </div>
+
+        <div class="social-info">
+          <h2>Media Sosial</h2>
+          <div class="social-links">
+            <a href="https://www.facebook.com/sakahmesari"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/sakahmesari?igsh=MXUzd3hic2F2bDEwMA=="
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://www.youtube.com/@sakahmesari"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; Warung Sakah Mesari. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../js/menu.js"></script>
+    <script src="../js/wa_sender.js"></script>
+  </body>
+</html>
