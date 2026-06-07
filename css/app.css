@@ -169,7 +169,9 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
   max-width: 350px;
 }
 
@@ -214,7 +216,9 @@ body {
   flex: 1;
   max-width: 300px;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .kontak2 li:hover {
@@ -272,8 +276,8 @@ body {
 }
 
 .slides img {
-  width: 100%;
-  max-height: 850px;
+  width: 80%;
+  max-height: 550px;
   object-fit: cover;
   border-radius: 10px;
   flex-shrink: 0;
@@ -343,7 +347,9 @@ body {
   max-width: 300px;
   padding: 20px;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .service-box:hover {
